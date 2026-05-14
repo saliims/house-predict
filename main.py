@@ -13,6 +13,7 @@ def sklearn_model(X_train_n, X_val_n, y_train_n, y_val, y_mu, y_sigma):
     y_val_pred = model.predict(X_val_n) * y_sigma + y_mu
     print(f"\nsklearn:")
     print(f'Val RMSE: ${rmse(y_val, y_val_pred): ,.0f}')
+    print(f"Val R²:   {r_squared(y_val, y_val_pred):.4f}")
 
 def main():
     X_train, X_val,X_train_n,X_val_n, y_train, y_val, y_train_n, y_mu, y_sigma = load_and_prepare("data/train.csv")
