@@ -25,4 +25,4 @@ def load_and_prepare(path):
     y_sigma = y_train.std()
     y_train_n = (y_train - y_mu) / y_sigma
 
-    return X_train_b, X_val_b, y_train, y_val, y_train_n, y_mu, y_sigma
+    return X_train_b, X_val_b,X_train_n, X_val_n, y_train, y_val, y_train_n, y_mu, y_sigma
